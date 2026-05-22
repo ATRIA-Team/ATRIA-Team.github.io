@@ -1,0 +1,79 @@
+import Hero from '@/components/Hero'
+import FeatureGrid, { Feature } from '@/components/FeatureGrid'
+import ProductImage from '@/components/ProductImage'
+import ScreenshotGallery from '@/components/ScreenshotGallery'
+import { siteConfig } from '@/lib/site-config'
+
+<Hero title={siteConfig.name}>
+  A medical collaboration suite for clinicians: meet, draw, annotate, and review
+  DICOM imagery together — in real time.
+</Hero>
+
+## Description
+
+{siteConfig.name} helps clinical teams collaborate on imaging cases without switching
+tools. Host a meeting, sketch on a shared canvas, annotate findings, open a DICOM
+study, and keep every participant on the same window — all from one place.
+
+## Features
+
+<FeatureGrid>
+  <Feature title="Meeting">
+    Start a secure session in one click and invite colleagues to review a case
+    together — video, voice, and screen all in one room.
+  </Feature>
+  <Feature title="2D / 3D Drawing">
+    Sketch directly on slices or volumes with pressure-aware tools designed for
+    clinical accuracy.
+  </Feature>
+  <Feature title="Annotation">
+    Add labels, measurements, and structured notes that travel with the case and
+    stay linked to the exact view.
+  </Feature>
+  <Feature title="DICOM Visualizer">
+    Open studies straight from PACS or local files with windowing, MPR, and series
+    navigation built in.
+  </Feature>
+  <Feature title="Shared Window">
+    Keep every participant on the same slice, zoom, and pan — no more
+    "scroll down a bit more" over the phone.
+  </Feature>
+</FeatureGrid>
+
+## Screenshots
+
+A glimpse of {siteConfig.name} in action. Replace these placeholder images with
+real captures in `public/images/`.
+
+<ScreenshotGallery>
+  <ProductImage
+    src="/images/dashboard-placeholder.svg"
+    alt="Meeting view placeholder"
+    caption="Meeting view — shared session with participants."
+  />
+  <ProductImage
+    src="/images/dashboard-placeholder.svg"
+    alt="DICOM visualizer placeholder"
+    caption="DICOM visualizer — multi-planar reconstruction."
+  />
+  <ProductImage
+    src="/images/dashboard-placeholder.svg"
+    alt="Annotation tools placeholder"
+    caption="Annotation tools — measurements and structured notes."
+  />
+</ScreenshotGallery>
+
+## Disclaimer
+
+{siteConfig.name} is provided as a collaboration and visualization tool. It is
+**not** intended for primary diagnostic interpretation. Clinical decisions must
+rely on validated diagnostic systems and the judgment of qualified medical
+professionals. Use of this software is at your own risk; the authors and
+distributors disclaim all liability arising from clinical use.
+
+## Contacts
+
+Questions, partnerships, or feedback? Reach the team:
+
+- Email: <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>
+- Issues and feature requests: <a href={siteConfig.issuesUrl}>GitHub</a>
