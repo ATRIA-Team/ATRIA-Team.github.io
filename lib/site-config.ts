@@ -4,7 +4,7 @@
  * MDX content that interpolates them.
  */
 export const siteConfig = {
-  name: 'My Product',
+  name: 'ATRIA: Heart Team Meetings',
   description:
     'A medical collaboration suite for clinicians: meet, draw, annotate, and review DICOM imagery together — in real time.',
   contactEmail: 'contact@example.com',
