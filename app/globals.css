@@ -1,5 +1,5 @@
 :root {
-  --bg: #f7f6f2;
+  --bg: #ffffff;
   --surface: #ffffff;
   --text: #1f2937;
   --muted: #6b7280;
@@ -16,7 +16,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: var(--font-inter), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
   display: flex;
@@ -46,7 +46,7 @@ h3[id] {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(247, 246, 242, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
   border-bottom: 1px solid var(--border);
@@ -73,7 +73,13 @@ h3[id] {
   letter-spacing: -0.01em;
 }
 
-.site-nav-brand svg { color: var(--primary); }
+.site-nav-logo {
+  width: 44px;
+  height: 24px;
+  object-fit: contain;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
 
 .site-nav-back {
   display: inline-flex;
@@ -298,6 +304,16 @@ h3[id] {
   margin: 1.5rem 0 0;
 }
 
+.product-image-trigger {
+  appearance: none;
+  border: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  background: transparent;
+  cursor: zoom-in;
+}
+
 .product-image img {
   width: 100%;
   height: auto;
@@ -310,6 +326,66 @@ h3[id] {
   padding: 0.9rem 1rem 1rem;
   color: var(--muted);
   font-size: 0.95rem;
+}
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+}
+
+.image-viewer-backdrop {
+  position: absolute;
+  inset: 0;
+  border: 0;
+  background: rgba(15, 23, 42, 0.72);
+  cursor: zoom-out;
+}
+
+.image-viewer-panel {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  max-height: calc(100vh - 4rem);
+  overflow: auto;
+  border-radius: 12px;
+  background: var(--surface);
+  box-shadow: 0 24px 80px rgba(15, 23, 42, 0.35);
+}
+
+.image-viewer-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.image-viewer-image {
+  width: 100%;
+  height: auto;
+  max-height: calc(100vh - 12rem);
+  object-fit: contain;
+  background: #e5e7eb;
+}
+
+.image-viewer-caption {
+  margin: 0;
+  padding: 1rem 1.25rem 1.25rem;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .screenshot-gallery {
