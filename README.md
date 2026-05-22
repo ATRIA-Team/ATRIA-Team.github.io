@@ -1,6 +1,7 @@
-# Next.js + MDX + GitHub Pages starter
+# ATRIA Team Website
 
-A minimal starter for a simple product page where technical users edit content directly in MDX.
+A simple Next.js + MDX product page deployed as the ATRIA Team organization
+GitHub Pages site.
 
 ## Install
 
@@ -17,16 +18,14 @@ npm run dev
 
 ## Deploy to GitHub Pages
 
-1. Push the project to a GitHub repository.
+1. Push the project to `ATRIA-Team/ATRIA-Team.github.io`.
 2. In GitHub, open **Settings → Pages**.
 3. Set **Source** to **GitHub Actions**.
 4. Push to `main` to trigger the deploy workflow.
 
-The `next.config.mjs` file derives the repository name automatically from `GITHUB_REPOSITORY`, then applies `basePath` and `assetPrefix` in production.
-
-### User / organization pages
-
-The default config targets a **project page** at `https://<user>.github.io/<repo>/`. If you are deploying a **user or organization page** (`https://<user>.github.io/`), the site is served from the domain root, so `basePath` and `assetPrefix` must stay empty. In that case, clear them in `next.config.mjs`:
+This site is an **organization page** at `https://atria-team.github.io/`.
+Because it is served from the domain root, `basePath` and `assetPrefix` stay
+empty in `next.config.mjs`:
 
 ```js
 basePath: '',

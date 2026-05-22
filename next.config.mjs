@@ -10,17 +10,15 @@ const withMDX = createMDX({
   },
 })
 
-const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'next-mdx-github-pages-starter'
-const isProd = process.env.NODE_ENV === 'production'
 const projectRoot = dirname(fileURLToPath(import.meta.url))
-const basePath = isProd ? `/${repo}` : ''
+const basePath = ''
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
   pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
   basePath,
-  assetPrefix: isProd ? `/${repo}/` : '',
+  assetPrefix: '',
   images: {
     unoptimized: true,
   },
