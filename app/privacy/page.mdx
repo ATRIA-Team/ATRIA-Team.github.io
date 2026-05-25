@@ -1,62 +1,127 @@
 import { siteConfig } from '@/lib/site-config'
+import Image from 'next/image'
 
 export const metadata = {
   title: `Privacy Policy — ${siteConfig.name}`,
-  description: `How ${siteConfig.name} collects, uses, and protects your information.`,
+  description: `How ${siteConfig.name} handles clinical data and privacy.`,
 }
+
+<Image
+  className="page-logo"
+  src="/images/atria-logo-mark.png"
+  alt="ATRIA logo"
+  width={516}
+  height={182}
+  priority
+/>
 
 # Privacy Policy
 
-_Last updated: replace with the date this policy takes effect._
+**Last Updated:** May 2026
 
-This Privacy Policy describes how **{siteConfig.name}** ("we", "us", or "our") collects, uses, stores, and shares information when you use our application and related services. By using the service, you agree to the practices described below.
+Welcome to ATRIA, a spatial computing platform designed to support pre-operative surgical collaboration and clinical preparation using Apple Vision Pro.
 
-## Information we collect
+This Privacy Policy explains how clinical data is handled when healthcare professionals use the Application for surgical planning, visualization, and collaboration.
 
-- **Account information**: name, email address, and credentials you provide when registering.
-- **Usage data**: features used, session timestamps, and diagnostic logs needed to operate the service.
-- **Imaging data**: DICOM studies and annotations you choose to upload, share, or process within the application.
-- **Device data**: browser, operating system, and IP address, collected automatically for security and reliability.
+## Disclaimer
 
-## How we use your information
+The Application is intended solely as a collaborative visualization and pre-operative support tool for healthcare professionals.
 
-- To operate, maintain, and improve the service.
-- To authenticate users and protect against unauthorized access.
-- To respond to your requests and provide customer support.
-- To comply with legal obligations and enforce our terms.
+The Application does not provide medical diagnoses, treatment recommendations, or autonomous clinical decision-making. Any clinical interpretation, surgical planning, or medical decision remains solely the responsibility of qualified healthcare professionals.
 
-## Sharing of information
+The Application is not intended to replace professional medical judgment, institutional procedures, or certified medical systems.
 
-We do not sell personal data. We may share information with:
+While reasonable efforts are made to support accurate visualization and collaboration workflows, the developers make no guarantees regarding clinical accuracy, completeness, or uninterrupted availability of the Application.
 
-- **Service providers** that help us host, secure, and analyze the service, under contractual confidentiality obligations.
-- **Authorities**, when required by law, regulation, or valid legal process.
-- **Other users**, only when you explicitly share content (for example, by inviting them to a meeting or shared window).
 
-## Data retention
+Users are responsible for independently verifying all medical information, measurements, and clinical decisions before use in patient care.
 
-We retain personal and imaging data only for as long as needed for the purposes described above, or as required by applicable law. You may request deletion of your account and associated data at any time.
+## Purpose of the App
 
-## Security
+The Application is intended to support healthcare professionals during pre-operative planning and collaborative clinical meetings. The App enables secure visualization and discussion of medical imaging, surgical documentation, and related patient information within an immersive spatial environment.
 
-We use industry-standard technical and organizational measures to protect data, including encryption in transit and access controls. No system is fully secure; you are responsible for safeguarding your credentials.
+The Application is designed as a clinical support tool and does not replace professional medical judgment or decision-making.
 
-## Your rights
+## Type of files supported
 
-Depending on your jurisdiction, you may have the right to access, correct, port, or delete your personal data, and to object to or restrict certain processing. Contact us to exercise these rights.
+Displaying of the following categories of data is supported in the Application:
 
-## International transfers
+- Medical imaging files (including DICOM files)
+- CT, MRI, ultrasound, and echocardiography scans
+- Surgical planning annotations
+- Pre-operative documentation
+- Clinical PDFs and uploaded reports
 
-Data may be processed in countries other than your own. Where required, we rely on appropriate safeguards such as standard contractual clauses.
+Clinical files displayed within the Application are uploaded and managed by users through [iCloud](https://www.apple.com/icloud/?utm_source=chatgpt.com) services associated with their own Apple accounts.
 
-## Children
+Medical data may be temporarily cached locally on the user's Apple Vision Pro device for the duration of an active session in order to enable real-time visualization and interaction. Such data is not retained after the session ends and is not shared with unauthorized third parties by the Application.
 
-The service is not directed to children under the age required by your local law for online services. We do not knowingly collect personal data from such children.
 
-## Changes to this policy
+The Application may temporarily process spatial interaction information required for immersive collaboration functionality, such as:
 
-We may update this policy from time to time. Material changes will be communicated through the service or by email. Continued use after changes take effect constitutes acceptance.
+- Hand tracking interactions
+- Spatial positioning of shared content
+- Session interaction states
 
-## Contact
+Personal spatial tracking data remains on local device and is not shared with the other participants and is only used to interact with the content of the App and its not saved.
 
-For privacy-related questions or requests, contact us at <a href={`mailto:${siteConfig.contactEmail}`}>{siteConfig.contactEmail}</a>.
+
+The Application does not use this data for advertising, profiling, or commercial analytics purposes. All of the processing and displaying happens locally on the Apple Vision Pro device and is not shared to Apple or any third parties.
+
+## Communication Security
+
+Real-time collaboration between participants occurs through integration with [Apple FaceTime.](https://www.apple.com/legal/privacy/data/en/face-time/)
+
+[FaceTime](https://www.apple.com/legal/privacy/data/en/face-time/) communication is protected using Apple's end-to-end encryption infrastructure. The Application does not access, monitor, record, or store [FaceTime](https://www.notion.so/Privacy-Policy-9a97adde9dda83ee87e00161ecddcd3b?pvs=21) audio or video communication content.
+
+The Application only manages clinical visualization and collaborative interaction layers associated with the meeting session.
+
+
+For additional information regarding Apple's handling of data through [iCloud](https://www.apple.com/icloud/?utm_source=chatgpt.com) and [FaceTime](https://www.apple.com/legal/privacy/data/en/face-time/) services, users may refer to Apple's official privacy documentation:
+
+- [Apple Privacy Policy](https://www.apple.com/legal/privacy/?utm_source=chatgpt.com)
+- [iCloud Privacy Overview](https://support.apple.com/en-us/102651?utm_source=chatgpt.com)
+- [FaceTime&Privacy](https://www.apple.com/legal/privacy/data/en/face-time/)
+
+## Data Protection Measures
+
+The Application is designed following privacy-by-design and security-by-design principles.
+
+Security measures may include:
+
+- Encryption of data in transit
+- Encryption of stored clinical data
+- Role-based access controls
+- Authenticated user access
+- Session timeout protections
+- Secure cloud infrastructure
+- Access logging and audit trails
+- Permission-controlled collaboration sessions
+
+Access to patient information is restricted to authorized users participating in the clinical workflow. Clinical data used during collaborative sessions is processed locally and transiently on-device and is not permanently retained by the Application.
+
+
+Certain synchronization, storage, and communication functionalities rely on Apple services, including [iCloud](https://www.apple.com/icloud/?utm_source=chatgpt.com) and [FaceTime.](https://www.apple.com/legal/privacy/data/en/face-time/) For additional information regarding Apple's privacy and security infrastructure, users may refer to:
+
+- [Apple Privacy Policy](https://www.apple.com/legal/privacy/?utm_source=chatgpt.com)
+- [Apple Platform Security Guide](https://support.apple.com/guide/security/welcome/web?utm_source=chatgpt.com)
+
+## User Responsibilities
+
+Healthcare institutions remain responsible for ensuring uploaded data complies with applicable laws, regulations, and institutional policies.
+
+Healthcare professionals and institutions using the Application are responsible for:
+
+- Uploading data lawfully
+- Obtaining any required patient consent or authorization
+- Ensuring that shared clinical information is relevant and necessary for the intended medical workflow
+- Managing institutional access permissions
+- Restricting access to authorized participants only
+- Following applicable healthcare, privacy, and confidentiality regulations and policies
+- Protecting authorized account credentials and authenticated devices
+- Maintaining the security of devices used to access the Application
+- Using anonymized or pseudonymized data where appropriate
+- Verifying the accuracy and appropriateness of uploaded clinical content
+- Ensuring compliance with their institution's cybersecurity and data governance requirements
+
+Users are responsible for ensuring that any files shared through the Application may lawfully be accessed and viewed by meeting participants.
