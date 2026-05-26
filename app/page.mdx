@@ -95,51 +95,72 @@ judgment.
 
 ## Contacts
 
-For technical support, feedback, or questions regarding the application:
+For technical support, feedback, or questions regarding the application, send a
+request to the ATRIA team.
 
-<div className="contact-table-wrap">
-  <table className="contact-table">
-    <thead>
-      <tr>
-        <th>Name and Surname</th>
-        <th>GitHub</th>
-        <th>E-Mail</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Samuel Scalise</td>
-        <td><a href="https://github.com/samsca12">samsca12</a></td>
-        <td><a href="mailto:samsca.99@icloud.com">samsca.99@icloud.com</a></td>
-      </tr>
-      <tr>
-        <td>Igor Tarantino</td>
-        <td><a href="https://github.com/cetreciii">cetreciii</a></td>
-        <td><a href="mailto:igor.tar135@gmail.com">igor.tar135@gmail.com</a></td>
-      </tr>
-      <tr>
-        <td>Michele Coppola</td>
-        <td><a href="https://github.com/MicheleCoppola17">MicheleCoppola17</a></td>
-        <td><a href="mailto:michele.coppola17@outlook.it">michele.coppola17@outlook.it</a></td>
-      </tr>
-      <tr>
-        <td>Sebastian Jaiovi</td>
-        <td><a href="https://github.com/Jaiovi">Jaiovi</a></td>
-        <td><a href="mailto:Sebastianjo2011@gmail.com">Sebastianjo2011@gmail.com</a></td>
-      </tr>
-      <tr>
-        <td>Julien Chromanski</td>
-        <td><a href="https://github.com/julienchoro">julienchoro</a></td>
-        <td><a href="mailto:julienchoro@icloud.com">julienchoro@icloud.com</a></td>
-      </tr>
-      <tr>
-        <td>Natalia Chicherova</td>
-        <td><a href="https://github.com/nataliaCHich">nataliaCHich</a></td>
-        <td><a href="mailto:nschicherova@gmail.com">nschicherova@gmail.com</a></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<form
+  className="contact-support-form"
+  action="https://formspree.io/f/mqejyokk"
+  method="POST"
+>
+  <input type="hidden" name="_subject" value="ATRIA support request" />
+  <div className="contact-form-grid">
+    <label className="contact-field">
+      <span>Request type</span>
+      <select name="requestType" required>
+        <option>Technical support</option>
+        <option>Clinical workflow question</option>
+        <option>Bug report</option>
+        <option>Feature request</option>
+        <option>Partnership or research</option>
+        <option>Other</option>
+      </select>
+    </label>
+
+    <label className="contact-field">
+      <span>Name</span>
+      <input name="name" placeholder="Name or organization" required />
+    </label>
+  </div>
+
+  <label className="contact-field">
+    <span>Email</span>
+    <input
+      type="email"
+      name="email"
+      placeholder="Where should we reply?"
+      required
+    />
+  </label>
+
+  <label className="contact-field">
+    <span>Summary</span>
+    <input
+      name="summary"
+      placeholder="Short title for the request"
+      required
+    />
+  </label>
+
+  <label className="contact-field">
+    <span>Message</span>
+    <textarea
+      name="message"
+      placeholder="Describe what you need help with. Please do not include patient-identifying information or confidential clinical data."
+      rows={6}
+      required
+    />
+  </label>
+
+  <p className="contact-form-note">
+    Requests are sent securely through Formspree to the ATRIA team. Please do
+    not include patient-identifying information or confidential clinical data.
+  </p>
+
+  <button type="submit" className="contact-form-submit">
+    Send request
+  </button>
+</form>
 
 Source code, technical resources, and development updates are available on
 GitHub:

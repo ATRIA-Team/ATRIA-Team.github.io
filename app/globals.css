@@ -430,72 +430,92 @@ h3[id] {
 }
 
 /* ─── Contact support ──────────────────────────────────────────────── */
-.contact-table-wrap {
-  width: 100%;
-  overflow-x: auto;
+.contact-support-form {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 880px);
   margin: 1.5rem 0 3rem;
+  padding: 1.25rem;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
   box-shadow: var(--shadow);
 }
 
-.contact-table {
-  width: 100%;
-  min-width: 720px;
-  border-collapse: separate;
-  border-spacing: 0;
+.contact-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.contact-field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.contact-field span {
   color: var(--text);
-}
-
-.contact-table th,
-.contact-table td {
-  border: 0;
-  border-bottom: 1px solid var(--border);
-  padding: 1rem 1.1rem;
-  text-align: left;
-  vertical-align: top;
-}
-
-.contact-table th + th,
-.contact-table td + td {
-  border-left: 1px solid var(--border);
-}
-
-.contact-table th {
-  background: #f8fafc;
   font-weight: 700;
+}
+
+.contact-field input,
+.contact-field select,
+.contact-field textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #f8fafc;
   color: var(--text);
+  font: inherit;
+  padding: 0.8rem 0.9rem;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
 }
 
-.contact-table tbody tr:last-child td {
-  border-bottom: 0;
+.contact-field textarea {
+  min-height: 150px;
+  resize: vertical;
 }
 
-.contact-table tbody tr {
-  transition: background-color 0.15s ease;
+.contact-field input:focus,
+.contact-field select:focus,
+.contact-field textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: var(--surface);
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.12);
 }
 
-.contact-table tbody tr:hover {
-  background: #f9fafb;
+.contact-form-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
-.contact-table a,
+.contact-form-submit {
+  width: fit-content;
+  min-height: 44px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--text);
+  color: var(--surface);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.75rem 1rem;
+  transition: background-color 0.15s ease, transform 0.15s ease;
+}
+
+.contact-form-submit:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
 .github-resource-card {
   color: var(--text);
   text-decoration: underline;
   text-decoration-color: rgba(31, 41, 55, 0.28);
   text-underline-offset: 0.18em;
-}
-
-.contact-table a:hover {
-  color: var(--primary-hover);
-  text-decoration-color: currentColor;
-}
-
-.contact-table a[href^="mailto:"] {
-  color: var(--muted);
-  overflow-wrap: anywhere;
 }
 
 .github-resource-card {
@@ -599,6 +619,10 @@ h3[id] {
   }
 
   .screenshot-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-grid {
     grid-template-columns: 1fr;
   }
 
